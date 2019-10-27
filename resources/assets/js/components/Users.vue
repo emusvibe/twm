@@ -31,7 +31,7 @@
                       <td>{{user.email}}</td>
                       <td>{{user.type |upText}}</td>
                       <td>{{user.created_at |myDate}}</td>
-                      
+
                         <td>
                           <a href="#" @click="editModal(user)">
                               <i class="fa fa-edit blue"></i>
@@ -40,10 +40,10 @@
                           <a href="#" @click="deleteUser(user.id)">
                           <i class="fa fa-trash red"></i>
                           </a>
-                          
+
                       </td>
                     </tr>
-                    
+
                   </tbody>
                 </table>
               </div>
@@ -79,7 +79,7 @@
         class="form-control" :class="{ 'is-invalid': form.errors.has('email') }">
       <has-error :form="form" field="email"></has-error>
     </div>
-    
+
     <div class="form-group">
       <textarea v-model="form.bio" type="text" name="bio"
         placeholder="Short bio for User (Optional)"
@@ -143,7 +143,6 @@
 this.form.put('api/user/'+this.form.id)
 .then(()=>{
   $('#addNew').modal('hide');
-
 Swal.fire(
       'Updated!',
       'Your file has been Updated.',
@@ -194,7 +193,6 @@ Swal("Failed", "Something went Wrong.", "warning");
     },
     loadUsers(){
       axios.get("api/user").then(({data}) => (this.users =data.data));
-
     },
     createUser(){
        this.$Progress.start();
@@ -202,18 +200,17 @@ Swal("Failed", "Something went Wrong.", "warning");
       .then(()=>{
 Fire.$emit('AfterCreate');
       $('#addNew').modal('hide')
-      Toast({
+      Toast.fire({
   type: 'success',
-  title: 'User Created successfully'
+  title: 'Signed in successfully'
 })
+
        this.$Progress.finish();
       })
       .catch(()=>{
-
       })
       
     }
-
   },
         created() {
             this.loadUsers();

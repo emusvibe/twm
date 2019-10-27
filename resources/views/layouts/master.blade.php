@@ -95,6 +95,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <p>Users</p>
                 </router-link>
               </li>
+              <li class="nav-item">
+                  <router-link to="/stock" class="nav-link">
+                    <i class="fas fa-warehouse nav-icon"></i>
+                    <p>Stock</p>
+                  </router-link>
+                </li>
               
             </ul>
           </li>

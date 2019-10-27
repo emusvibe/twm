@@ -10,6 +10,7 @@ require('./bootstrap');
 window.Vue = require('vue');
 import moment from 'moment';
 import { Form, HasError, AlertError } from 'vform';
+
 import Swal from 'sweetalert2'
 window.Swal = Swal;
 const Toast = Swal.mixin({
@@ -34,7 +35,8 @@ Vue.use(VueProgressBar, {
 let routes = [
     { path: '/dashboard', component: require('./components/Dashboard.vue') },
     { path: '/profile', component: require('./components/Profile.vue') },
-    { path: '/users', component: require('./components/Users.vue') }
+    { path: '/users', component: require('./components/Users.vue') },
+    { path: '/stock', component: require('./components/Stock.vue') }
   ]
   const router = new VueRouter({
       mode:'history',
@@ -47,6 +49,7 @@ let routes = [
   Vue.filter('myDate', function(created){
    return moment(created).format('MMMM Do YYYY');
   });
+  
   window.Fire = new Vue();
   
 
