@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Tappans Warehouse</title>
+        <title>Tappans</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -76,12 +76,16 @@
                     @endauth
                 </div>
             @endif
-           <div class = "jumbotron text-center">
+
             <div class="content">
                 <div class="title m-b-md">
-                   Tappans Warehouse Management System 
+                        <div class="jumbotron jumbotron-center">
+                                <div class="container">
+                                  <h1>Tappans</h1>
+                                  {{-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> --}}
+                                </div>
+                              </div>
                 </div>
-            </div>
 
                 {{-- <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
